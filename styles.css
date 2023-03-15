@@ -36,16 +36,70 @@ section {
     padding: 45px 0px;
 }
 
+/* 
+Challenge:
+1. Add CSS so the text in the first section 
+   renders correctly. 
+⚠️ Watch out for the amount of white space 
+   you have between the start of the section 
+   and the h2.
+⚠️ Don't write too much code!
+*/
+
 h1 {
     font-size: 36px;
     color: whitesmoke;
     margin: 0;
 }
 
+h2 {
+    /*font-size: 24px;
+    color: #2b283a;*/ 
+
+    /* You don't need to set the size and color
+    properties because the body selector has already
+    been set with these parameters */
+
+    margin-top: 0;
+}
+
+
 h3 {
     font-size: 20px;
     color: #d0aaff;
     margin: 0;
+}
+
+/*p {
+    font-size: 16px;
+    color: #2b283a;
+
+    Likewise, you don't need to set size
+    and color because the body selector has
+    taken care of that for you
+
+}*/
+
+/* 
+Challenge:
+1. Set the color of the link in the paragraph.
+2. Make the link color change on hover and 
+   active states.
+3. Search online to find out how you can give 
+   the underline a dotted appearance. 
+*/
+
+p > a {
+    color: #ef5839;
+    text-decoration: dotted underline;
+}
+
+p > a:hover {
+    color: #d4b44c;
+}
+
+p > a:active {
+    color: #d4b44c;
 }
 
 .main-image {
