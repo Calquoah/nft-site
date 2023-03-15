@@ -4,3 +4,50 @@ body {
     color: #2b283a;
     margin: 0; /* to override the default browser margin */
 }
+
+/* Something to note:
+
+When an element touches its parent, its
+top and bottom margins will merge with the 
+margins of the parent element 
+
+What's the Solution to this problem?
+
+To add padding to the parent element
+
+*/
+
+/* 
+Challenge:
+1. Create a "section" selector and give it the 
+   same padding as the header.
+2. In index.html, find the image of the purple 
+   sneakers and attach a class to it. 
+3. Make it so this image takes up 100% 
+   of the section width.
+*/
+
+header {
+    background-color: #5f29a3;
+    padding: 45px 0px;
+}
+
+section {
+    padding: 45px 0px;
+}
+
+h1 {
+    font-size: 36px;
+    color: whitesmoke;
+    margin: 0;
+}
+
+h3 {
+    font-size: 20px;
+    color: #d0aaff;
+    margin: 0;
+}
+
+.main-image {
+    width: 100%;
+}
