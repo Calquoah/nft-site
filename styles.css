@@ -48,12 +48,24 @@ Challenge:
 ⚠️ Don't write too much code!
 */
 
+/*
+  Challenge:
+   - Change all the font-sizes from em to rem:
+     h1, h2, h3, .subheading, and .btn
+*/
+
 h1, h3 {
     margin: 0;
 }
 
+/*
+  Challenge 4:
+   - Convert the font-size values of the
+     h1, h2, h3 and .subheading class from px to em
+*/
+
 h1 {
-    font-size: 36px;
+    font-size: 2.25rem; /* 36/16 = 2.25 */
     color: whitesmoke;
 }
 
@@ -66,11 +78,12 @@ h2 {
     been set with these parameters */
 
     margin-top: 0;
+    font-size: 1.75rem; /* 28/16 = 1.75 */
 }
 
 
 h3 {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20/16 = 1.25 */
     color: #d0aaff;
 }
 
@@ -105,6 +118,13 @@ Challenge:
 3. Search online to find out how you can give 
    the underline a dotted appearance. 
 */
+
+.subheading {
+    display: block;
+    /*font-size: 0.56em; /* 20/36 = 0.56 */
+    font-size: 1.25rem; /*20/16 = 1.25 */
+    color: #d0aaff;
+}
 
 a {
     color: #ef5839;
@@ -181,12 +201,22 @@ Challenge:
    will need to create.
 */
 
+/*
+  Challenge 5:
+   1. Convert the padding value of .btn from px to em
+   2. Space buttons both horizontally and vertically using margins and em units
+   3. Convert the font-size of .btn from px to em
+*/
+
 .btn {
-    padding: 10px 19px;
-    border-radius: 4.6px;
+    font-size: 1.125rem; /* 18 / 16 */
     font-weight: 500;
     text-decoration: none;
     display: inline-block;
+    padding: 0.5em 1em; /* 10px 20px */
+    border-radius: 4.6px;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
 }
 
 
@@ -226,10 +256,17 @@ Challenge:
    as shown in the slide.
 */
 
+
+/*
+  Challenge 6:
+   1. Convert the padding of header, section, and footer from px to em
+   2. Convert the bottom-margin of .main-image from px to em
+*/
+
 header, 
 section, 
 footer {
-    padding: 45px 0px;
+    padding: 2.875em 0px; /* 46/16 */
 }
 
 header, .section-two {
@@ -257,18 +294,53 @@ footer {
     color: whitesmoke;
 }
 
+
+/*
+ Challenge 1:
+  Use a percentage value to create flexible containers 
+  that resize according to their parent’s width
+*/
+
+
+/*
+  Challenge 3:
+   1. Google "how to set the maximum width of an element"  
+   2. Apply a maximum width of 800px to .container
+*/
+
 .container {
-    width: 620px;
+    width: 90%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
+
+/*
+  Challenge:
+   1. Apply a maximum width to .main-image
+   2. Make the image slightly narrower than 
+     its container and center it on the page 
+*/
+
+
 .main-image {
+    display: block;
     width: 100%;
+    max-width: 640px;
+    margin: 0 auto 2em; /* 32/16 */
 }
 
 
+/*
+  Challenge:
+    - Make each .feature-image fluid using a percentage
+    - The images should display proportionally on the same line, 
+      each taking up about half of the space
+*/
+
+
 .feature-image {
-    width: 300px;
+    width: 48.8%;
     border-radius: 4.6px;
 }
 
