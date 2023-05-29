@@ -95,9 +95,18 @@ Challenge:
    paragraph text to 23px;
 */
 
+/*
+  Challenge:
+   - Set the line-height of the paragraph to a unitless value
+     that’s 150% larger than the font size
+*/
+
 p {
-    line-height: 23px;
+    line-height: 1.5;
 }
+
+/* Rule of Thumb: Set line-height at 
+approximately 1.5 times the font-size. */
 
 
 /*p {
@@ -346,8 +355,27 @@ footer {
 
 .section-two-image-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
+
+/* ----- MEDIA QUERIES ----- */
+
+/*
+  Challenge:
+    1. Create a media query that targets a browser width
+       of 480px or wider
+     2. Within the media query, select .section-two-image-container
+       and add the flexbox property to display the images on the same row
+*/
+
+@media (min-width: 480px) {
+    .section-two-image-container {
+        flex-direction: row;
+    }
+}
+
+
 
 /* CSS Specificity
 
