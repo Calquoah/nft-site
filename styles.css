@@ -65,9 +65,23 @@ h1, h3 {
 */
 
 h1 {
-    font-size: 2.25rem; /* 36/16 = 2.25 */
+    font-size: 1.75rem; /* 36/16 = 2.25 */ /* To readjust the text for smaller font sizes: 28/16 */
     color: whitesmoke;
 }
+
+
+/*
+  Challenge 13: Responsive text
+    - h2:
+        - Initial size: rem value equal to 22px
+        - At 768px: increase to 1.75rem
+    - .subheading:
+        - Initial size: suitable for smaller screens
+        - At 768px: increase to 1.25rem  
+    - Paragraphs:
+        - At 768px: increase to rem value equal to 18px
+*/
+
 
 h2 {
     /*font-size: 24px;
@@ -78,7 +92,7 @@ h2 {
     been set with these parameters */
 
     margin-top: 0;
-    font-size: 1.75rem; /* 28/16 = 1.75 */
+    font-size: 1.375rem; /* 28/16 = 1.75 */ /* 22/16 */
 }
 
 
@@ -131,7 +145,7 @@ Challenge:
 .subheading {
     display: block;
     /*font-size: 0.56em; /* 20/36 = 0.56 */
-    font-size: 1.25rem; /*20/16 = 1.25 */
+    font-size: 1rem; /*20/16 = 1.25 */ /* 16/16 */
     color: #d0aaff;
 }
 
@@ -217,14 +231,21 @@ Challenge:
    3. Convert the font-size of .btn from px to em
 */
 
+/*
+  Challenge 12:
+    - On narrow screens, each button should take up the full width
+      of their container 
+    - The buttons should display on the same row only at the 768px breakpoint
+*/
+
 .btn {
     font-size: 1.125rem; /* 18 / 16 */
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;
+    text-align: center;
+    display: block;
     padding: 0.5em 1em; /* 10px 20px */
     border-radius: 4.6px;
-    margin-right: 0.5em;
     margin-bottom: 1em;
 }
 
@@ -272,10 +293,21 @@ Challenge:
    2. Convert the bottom-margin of .main-image from px to em
 */
 
+
+
+/*
+  Challenge 10:
+    1. Create a new media query that targets a browser width of 768px or wider. 
+    2. Within the media query, select the header, section, and footer elements
+       and apply a top and bottom padding of 2.875em.
+    3. Adjust the initial padding for the header, section and footer elements.
+       Set a top and bottom padding value in em equal to 20px.
+*/
+
 header, 
 section, 
 footer {
-    padding: 2.875em 0px; /* 46/16 */
+    padding: 1.25em 0; /* 46/16 */
 }
 
 header, .section-two {
@@ -349,15 +381,15 @@ footer {
 
 
 .feature-image {
-    width: 48.8%;
+    width: 100%;
     border-radius: 4.6px;
+    margin-bottom: 1em;
 }
 
-.section-two-image-container {
+/* .section-two-image-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
+} */
 
 /* ----- MEDIA QUERIES ----- */
 
@@ -365,15 +397,62 @@ footer {
   Challenge:
     1. Create a media query that targets a browser width
        of 480px or wider
-     2. Within the media query, select .section-two-image-container
+    2. Within the media query, select .section-two-image-container
        and add the flexbox property to display the images on the same row
+    3. Inside the media query, select .feature-image and 
+       add the fluid width for wider screens only
 */
 
 @media (min-width: 480px) {
     .section-two-image-container {
-        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+    .feature-image {
+        width: 48.8%;
     }
 }
+
+@media (min-width: 768px) {
+    header,
+    section,
+    footer {
+        padding: 2.875em 0;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .subheading {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+
+
+
+/*Think "Mobile First" & Common Breakpoints 
+
+- 480px are for mobile phones
+- 768px are for tablets
+- 1024px are for smaller laptop screens
+- 1280px are for desktop screens and larger screens
+
+*/
 
 
 
