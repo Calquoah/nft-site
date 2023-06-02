@@ -391,6 +391,25 @@ footer {
     flex-direction: column;
 } */
 
+
+/* ------NAVIGATION ---------- */
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li:not(:last-child) {
+    border-bottom: 1px dotted #a190b6;
+}
+
+
 /* ----- MEDIA QUERIES ----- */
 
 /*
