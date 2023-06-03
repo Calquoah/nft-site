@@ -304,6 +304,7 @@ Challenge:
        Set a top and bottom padding value in em equal to 20px.
 */
 
+
 header, 
 section, 
 footer {
@@ -394,19 +395,28 @@ footer {
 
 /* ------NAVIGATION ---------- */
 
+/*
+  Challenge 15: Write initial nav styles
+    1. Center-align the header content
+    2. Apply a top margin to the nav element to create space
+       between the nav and subheading
+    3. Make sure that the center alignment, the nav’s top margin,
+       and dotted borders between links display only on viewport widths
+       narrower than 768px
+*/
+
 nav a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.125rem; /* 18/16 */
+    padding: 0.85em 0; /* Setting the value relative to the current font-size */
+    display: block; /* This way, you can see the affect of the padding */
 }
 
 ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
-}
-
-li:not(:last-child) {
-    border-bottom: 1px dotted #a190b6;
 }
 
 
@@ -431,6 +441,30 @@ li:not(:last-child) {
         width: 48.8%;
     }
 }
+
+@media (max-width: 767px) {
+    header {
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 1.25em;
+    }
+
+    li:not(:last-child) {
+        border-bottom: 1px dotted #a190b6;
+    }
+}
+
+/*
+  Challenge: Navigation styles for wider screens
+    1. Use flexbox to display the navigation horizontally
+       on one row when the screen is 768px or wider
+    2. Align the nav with the right edge of its container
+    3. Apply space between each link with a margin
+    4. On wider screens, all of the content inside the header
+       should be vertically centered
+*/
 
 @media (min-width: 768px) {
     header,
@@ -459,7 +493,22 @@ li:not(:last-child) {
     p {
         font-size: 1.125rem;
     }
+
+    header .container, 
+    nav ul {
+        display: flex;
+    }
+
+    header .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav li {
+        margin-left: 1.25em;
+    }
 }
+
 
 
 
